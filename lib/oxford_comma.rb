@@ -1,10 +1,9 @@
 def oxford_comma(array)
-  case array
-   when array.length == 1
+  if array.length == 1
     puts array.join
-   when array.length == 2
+  elsif array.length == 2
     puts array.join(" and ")
-   when array.length >= 3
+  else
     last_word = array.pop
     oxford_comma_string = array.join(", ")
     oxford_comma_string << ", and #{last_word}"
